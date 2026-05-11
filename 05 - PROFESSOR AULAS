@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+int opcao, aulas, salario;
+    
+do{
+    printf("DIGITE: \n 1 - PROFESSOR GRADUADO \n 2 - PROFESSOR MESTRE \n 3 - PROFESSOR DOUTOR \n");
+    scanf("%d", &opcao);
+}   while(opcao < 1 || opcao > 3); 
+        
+printf("\nme informe a quantidade de aulas: ");
+scanf("%d", &aulas);
+
+switch(opcao) {
+    case 1 :
+        salario = aulas * 12;
+        break;
+    case 2 :
+        salario = aulas * 17;
+        break;
+    case 3 :
+        salario = aulas * 25;
+        break;
+}
+
+printf("o salario e: %d reais", salario);
+
+    return 0;
+}
