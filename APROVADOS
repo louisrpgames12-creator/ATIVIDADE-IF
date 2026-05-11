@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    float nota[4], notona = 0, media;
+    char sexo;
+    int i;
+    
+    do {
+        printf("me informe o sexo M ou F: ");
+        scanf(" %c", &sexo);
+    }   while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f');
+    
+    for(i = 0; i < 4; i++) {
+        do {
+            printf("me informe o valor de uma nota de 1 a 10");
+            scanf("%f", &nota[i]);
+        }   while(nota[i] < 1 || nota[i] > 10);
+        notona += nota[i];
+    }
+    
+    media = notona/4;
+    
+    if(media >= 6 && (sexo == 'M' || sexo == 'm'))
+        printf("APROVADO");
+    else
+        if(media >= 6 && (sexo == 'F' || sexo == 'f'))
+        printf("APROVADA");
+        else
+            if(media < 6 && (sexo == 'M' || sexo == 'm'))
+            printf("REPROVADO");
+            else
+                if(media < 6 && (sexo == 'F' || sexo == 'f'))
+                printf("REPROVADA");
+                
+    return 0;
+}
