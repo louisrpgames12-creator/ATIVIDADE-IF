@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()  {
+    int saldo;
+    float liberado;
+    
+    printf("ME INFORME O SALDO MEDIO: ");
+    scanf("%d", &saldo);
+
+    if(saldo <= 200) {
+        printf("saldo medio e de: %d", saldo);
+    } else
+        if(saldo > 200 && saldo <= 400) {
+            liberado = (float)saldo * 0.1;
+            printf("saldo medio e de: %d e o valor liberado e: %.2f", saldo, liberado);
+        } else
+            if(saldo > 400 && saldo <= 600) {
+                liberado = (float)saldo * 0.3;
+                printf("saldo medio e de: %d e o valor liberado e: %.2f", saldo, liberado);
+            } else {
+                liberado = (float)saldo * 0.4;
+                printf("saldo medio e de: %d e o valor liberado e: %.2f", saldo, liberado);
+            }
+            
+    return 0;
+}
