@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+float maior(float a, float b, float c) {
+    float maiorzao;
+    if(a > b && a > c)
+    maiorzao = a;
+    else
+        if(b > a && b > c)
+        maiorzao = b;
+        else
+            if(c > a && c > b)
+            maiorzao = c;
+            else
+            printf("erro!!!!!");
+
+return maiorzao;
+}
+    
+int main() {
+    
+    printf("maior e: %.2f", maior(10, 5, 3));
+
+    return 0;
+}
