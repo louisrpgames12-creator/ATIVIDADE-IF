@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()  {
+    int ano, valorcarro;
+    float taxa;
+    
+    printf("Me informe o ano e o valor do carro: ");
+    scanf("%d%d", &ano, &valorcarro);
+    
+    if(ano < 1990) 
+        taxa = (float)valorcarro * 0.01;
+    else
+        taxa = (float)valorcarro * 0.015;
+        
+    printf("imposto de %.2f", taxa);
+    return 0;
+}
