@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()  {
+    int opcao;
+    float preco, final;
+    
+    printf("INFORME O PRECO DE UM PRODUTO: ");
+    scanf("%f", &preco);
+    
+    do{
+        
+    printf("INFORME O CODIGO DE UM PRODUTO DE 1 A 5: ");
+    scanf("%d", &opcao);
+    
+    }while(opcao < 1 || opcao > 5);
+    
+    switch(opcao) {
+        case 1:
+            final = preco + (preco * 0.1);
+            break;
+        case 2:
+            final = preco + (preco * 0.15);
+            break;
+        case 3:
+            final = preco + (preco * 0.08);
+            break;
+        case 4:
+            final = preco + (preco * 0.12);
+            break;
+        case 5:
+            final = preco + (preco * 0.25);
+            break;
+    }
+
+    printf("o preco final e: %.2f", final);
+    
+    return 0;
+}
