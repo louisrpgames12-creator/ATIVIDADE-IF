@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+char sexo;
+
+printf("digite M para Masculino ou F para Feminino");
+scanf(" %c", &sexo);
+
+while(sexo != 'M' && sexo != 'm' && sexo != 'F' && sexo != 'f'){
+printf("sexo invalido, digite F,f, M ou m:   ");
+scanf(" %c", &sexo);
+}
+
+if(sexo == 'm' || sexo == 'M' || sexo == 'f' || sexo == 'F')
+    printf("sexo valido");
+    
+    return 0;
+}
