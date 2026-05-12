@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()  {
+    int opcao;
+        
+    printf("100 - CACHORRO QUENTE : 20 REAIS \n101 - BAURU : 22 REAIS \n102 - HAMBURGUER : 34 REAIS \n103 - BAGUETE : 25 REAIS \n104 - PASTEL : 12 REAIS \n105 - OMELETE : 18 REAIS");
+    scanf("%d", &opcao);
+        
+    while(opcao < 100 || opcao > 105) {
+        printf("opcao invalida");
+        scanf("%d", &opcao);
+    }
+    
+    switch(opcao) {
+        case 100:
+            printf("\n100 - CACHORRO QUENTE : 20 REAIS");
+            break;
+        case 101:
+            printf("\n101 - BAURU : 22 REAIS");
+            break;
+        case 102:
+            printf("\n102 - HAMBURGUER : 34 REAIS");
+            break;
+        case 103:
+            printf("\n103 - BAGUETE : 25 REAIS");
+            break;
+        case 104:
+            printf("\n104 - PASTEL : 12 REAIS");
+            break;
+        case 105:
+            printf("\n105 - OMELETE : 18 REAIS");
+            break;
+    }
+    
+    return 0;
+}
