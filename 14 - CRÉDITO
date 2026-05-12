@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()  {
+    float renda, parcela;
+    int quantidadeparcelas, idade;
+    
+    printf("INFORME RENDA MENSAL, VALOR DA PARCELA, IDADE E NUMERO DE PARCELAS: ");
+    scanf("%f%f%d%d", &renda, &parcela, &idade, &quantidadeparcelas);
+    
+    if(parcela > renda * 0.3 || idade < 25) {
+        printf("credito negado");
+    } else {
+        printf("credito aprovado");
+    }
+    return 0;
+}
