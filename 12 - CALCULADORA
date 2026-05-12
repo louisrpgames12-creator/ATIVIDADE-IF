@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()  {
+    int opcao, valor1, valor2;
+    
+    do{
+        
+    printf("DIGITE: \n1 - SOMA\n2 - SUBTRACAO\n3 - MULTIPLICACAO\n4 -  DIVISAO");
+    scanf("%d", &opcao);
+    
+    }while(opcao < 1 || opcao > 4);
+    
+    printf("me informe dois valores: ");
+    scanf("%d%d", &valor1, &valor2);
+    
+        switch(opcao) {
+            case 1:
+                printf("%d + %d = %d", valor1, valor2, valor1 + valor2);
+                break;
+            case 2:
+                printf("%d - %d = %d", valor1, valor2, valor1 - valor2);
+                break;
+            case 3:
+                printf("%d * %d = %d", valor1, valor2, valor1 * valor2);
+                break;
+            case 4:
+                while(valor2 == 0) {
+                    
+                    printf("informe um valor diferente de 0: ");
+                    scanf("%d", &valor2);
+                    
+                }
+                printf("%d / %d = %d", valor1, valor2, valor1 / valor2);
+                break;
+        }
+        
+    return 0;
+}
