@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()  {
+    float nota1, nota2, nota3, media;
+    
+    printf("INFORME 3 NOTAS: ");
+    scanf("%f%f%f", &nota1, &nota2, &nota3);
+    
+    media = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5))/10;
+    
+    if(media >= 7) {
+        printf("APROVADO");
+    } else
+        if(media < 7 && media >= 5) {
+            printf("RECUPERACAO");
+        } else {
+            printf("REPROVADO");
+        }
+        
+    return 0;
+}
