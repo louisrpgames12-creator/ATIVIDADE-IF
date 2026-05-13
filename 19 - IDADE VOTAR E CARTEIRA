@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int anonasc, anoatual;
+    
+    printf("ME INFORME O ANO DE NASCIMENTO E O ANO ATUAL: ");
+    scanf("%d%d", &anonasc, &anoatual);
+    
+    if(anoatual - anonasc >= 16) {
+        if(anoatual - anonasc >= 18) {
+            printf("\nPODE TIRAR CARTEIRA E VOTAR");
+        } else {
+            printf("\nPODE VOTAR");
+        }
+    } else {
+        printf("\nNAO PODE NEM VOTAR NEM TIRAR CARTEIRA");
+    }
+
+    return 0;
+}
