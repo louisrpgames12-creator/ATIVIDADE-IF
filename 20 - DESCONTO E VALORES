@@ -1,0 +1,39 @@
+#include <stdio.h>
+float valores(float valor, int codigo) {
+    float novovalor;
+    
+    switch(codigo) {
+        case 1:
+            novovalor = valor * 0.85;
+            break;
+        case 2:
+            novovalor = valor * 0.95;
+            break;
+        case 3:
+            novovalor = valor;
+            break;
+        case 4:
+            novovalor = valor * 1.1;
+            break;
+    }
+    
+    return novovalor;    
+}
+
+int main() {
+    float valor;
+    int opcao;
+        do{
+            
+            printf("1 - VISTA\n2 - VISTA(CARTAO)\n3 - PARCELADO(2X)\n4 - PARCELADO(3X)");
+            scanf("%d", &opcao);
+        
+        }while(opcao < 1 || opcao > 4);
+        
+        printf("\nVALOR COMPRA");
+        scanf("%f", &valor);
+        
+        printf("\n%.2f", valores(valor,opcao));
+
+    return 0;
+}
