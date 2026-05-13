@@ -2,12 +2,15 @@
 
 int main() {
     int inteiro;
-    do{
     
         printf("ME INFORME UM NUMERO INTEIRO(1 A 7)");
         scanf("%d", &inteiro);
     
-    }while(inteiro < 1 || inteiro > 7);
+    while(inteiro < 1 || inteiro > 7) {
+        
+        printf("INVALIDO");
+        scanf("%d", &inteiro);
+    }
     
     switch(inteiro) {
         case 1:
