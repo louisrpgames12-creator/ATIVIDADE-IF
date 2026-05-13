@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+char conceitofinal(float nota) {
+    char caractere;
+    
+    if(nota < 60) {
+        caractere = 'F';
+    } else
+        if(nota >= 60 && nota < 70) {
+            caractere = 'D';
+        } else
+            if(nota >= 70 && nota < 80) {
+                caractere = 'C';
+            } else
+                if(nota >= 80 && nota < 90) {
+                    caractere = 'B';
+                } else {
+                    caractere = 'A';
+}
+
+    return caractere;    
+}
+
+int main() {
+    float nota;
+    do{
+        
+    printf("me informe a nota de um aluno(0 a 100): ");
+    scanf("%f", &nota);
+    
+    }while(nota < 0 || nota > 100);
+    
+    printf("%c", conceitofinal(nota));
+
+    return 0;
+}
