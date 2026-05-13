@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int inteiro(int a, int b, int c) {
+    int maior;
+    
+    if(a > b) {
+        if(a > c) {
+            maior = a;
+        } else 
+            maior = c;
+    }else
+        if(b > c) {
+            maior = b;
+        } else 
+            maior = c;
+        
+        
+    return maior;    
+}
+
+int main() {
+    int a, b, c;
+    
+    printf("informe 3 valores inteiros: ");
+    scanf("%d%d%d", &a, &b, &c);
+    
+    printf("%d", inteiro(a, b,c ));
+
+    return 0;
+}
