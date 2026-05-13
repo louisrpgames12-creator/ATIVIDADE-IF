@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int inteiro;
+    do{
+    
+        printf("ME INFORME UM NUMERO INTEIRO(1 A 7)");
+        scanf("%d", &inteiro);
+    
+    }while(inteiro < 1 || inteiro > 7);
+    
+    switch(inteiro) {
+        case 1:
+            printf("1 - DOMINGO");
+            break;
+        case 2:
+            printf("2 - SEGUNDA");
+            break;
+        case 3:
+            printf("3 - TERCA");
+            break;
+        case 4:
+            printf("4 - QUARTA");
+            break;
+        case 5:
+            printf("5 - QUINTA");
+            break;
+        case 6:
+            printf("6 - SEXTA");
+            break;
+        case 7:
+            printf("7 - SABADO");
+            break;
+    }
+    
+
+    return 0;
+}
